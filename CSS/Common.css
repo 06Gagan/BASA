@@ -12,16 +12,6 @@ body {
     color: white !important;
 }
 
-.main-content {
-    padding: 20px;
-}
-
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
 .sidebar {
     height: 100%;
     position: fixed;
