@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,27 @@
         body {
             background-color: #f8f9fa;
         }
-        .header{
+
+        .header {
             background-color: #343a40;
             color: white;
             padding: 8px 0;
         }
+
         .nav-link {
             color: white !important;
         }
+
         .main-content {
             padding: 20px;
         }
+
         .profile-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
         }
+
         .sidebar {
             height: 100%;
             position: fixed;
@@ -37,6 +43,7 @@
             padding-top: 60px;
             width: 0;
         }
+
         .sidebar a {
             padding: 10px 15px;
             text-decoration: none;
@@ -45,9 +52,11 @@
             display: block;
             transition: 0.3s;
         }
+
         .sidebar a:hover {
             color: #f1f1f1;
         }
+
         .sidebar .closebtn {
             position: absolute;
             top: 0;
@@ -55,6 +64,7 @@
             font-size: 36px;
             margin-left: 50px;
         }
+
         .openbtn {
             font-size: 20px;
             cursor: pointer;
@@ -62,88 +72,100 @@
             color: white;
             padding: 10px 15px;
             border: none;
-            display: none; /* Hide by default */
+            display: none;
+            /* Hide by default */
         }
+
         .openbtn:hover {
             background-color: #444;
         }
+
         /* Show the menu button on smaller screens */
         @media screen and (max-width: 980px) {
             .openbtn {
                 display: block;
             }
+
             .navbar-nav {
-                display: none; /* Hide the navbar links */
+                display: none;
+                /* Hide the navbar links */
             }
         }
+
         @media screen and (min-width: 981px) {
             .navbar-nav {
-                display: flex !important; /* Show the navbar links */
+                display: flex !important;
+                /* Show the navbar links */
             }
         }
     </style>
 </head>
+
 <body>
 
-<!-- Sidebar -->
-<div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="research.html">Research</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="awards.html">Awards</a>
-    <a href="mentorship.html">Mentorship</a>
-    <a href="experience.html">Experience</a>
-    <a href="talks.html">Talks</a>
-    <a href="contact.html">Contact</a>
-</div>
-
-<!-- Header -->
-<header class="header">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="openbtn" onclick="openNav()">☰ Menu</button>
-            <a class="navbar-brand" href="#"><img src="245-2451831_iit-madras-logo.png" alt="IIT Madras Logo" style="height: 50px;"></a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                    <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
-                    <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mentorship.html">Mentorship</a></li>
-                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="talks.html">Talks</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="awards.html">Awards</a>
+        <a href="mentorship.html">Mentorship</a>
+        <a href="experience.html">Experience</a>
+        <a href="talks.html">Talks</a>
+        <a href="contact.html">Contact</a>
     </div>
-</header>
 
-<!-- Main Content -->
-<section id="home" class="main-content">
-    <div class="container text-center">
-        <img src="profile.jpg" alt="Dr. Basavaraj" class="profile-img img-fluid mb-3">
-        <h1>Dr. Madivala G. Basavaraj</h1>
-        <h3>Professor, Department of Chemical Engineering, IIT Madras</h3>
-        <p><strong>Email:</strong> basa@iitm.ac.in | <strong>Phone:</strong> +91 44 22574164</p>
-        <p class="lead">Dr. Basavaraj's brief biography goes here. This section provides an overview of his academic and professional background, highlighting key achievements and research interests.</p>
-    </div>
-</section>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="openbtn" onclick="openNav()">☰ Menu</button>
+                <a class="navbar-brand" href="#"><img src="245-2451831_iit-madras-logo.png" alt="IIT Madras Logo"
+                        style="height: 50px;"></a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                        <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+                        <li class="nav-item"><a class="nav-link" href="awards.html">Awards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mentorship.html">Mentorship</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="talks.html">Talks</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-    }
+    <!-- Main Content -->
+    <section id="home" class="main-content">
+        <div class="container text-center">
+            <img src="profile.jpg" alt="Dr. Basavaraj" class="profile-img img-fluid mb-3">
+            <h1>Dr. Madivala G. Basavaraj</h1>
+            <h3>Professor, Department of Chemical Engineering, IIT Madras</h3>
+            <p><strong>Email:</strong> basa@iitm.ac.in | <strong>Phone:</strong> +91 44 22574164</p>
+            <p class="lead">Dr. Basavaraj's brief biography goes here. This section provides an overview of his academic
+                and professional background, highlighting key achievements and research interests.</p>
+        </div>
+    </section>
 
-    function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-    }
-</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+    <script src="common.js"></script>
 </body>
+
 </html>
