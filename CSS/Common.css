@@ -1,0 +1,91 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.header {
+    background-color: #343a40;
+    color: white;
+    padding: 8px 0;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.sidebar {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    width: 0;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #343a40;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    display: none;
+    /* Hide by default */
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Show the menu button on smaller screens */
+@media screen and (max-width: 980px) {
+    .openbtn {
+        display: block;
+    }
+
+    .navbar-nav {
+        display: none;
+        /* Hide the navbar links */
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .navbar-nav {
+        display: flex !important;
+        /* Show the navbar links */
+    }
+}
