@@ -1,10 +1,26 @@
 body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.main-content {
+    margin-top: 60px; /* Adjust based on your header height */
 }
 
 .left-column {
     background-color: #f0f0f0;
     padding: 20px;
+    position: fixed;
+    top: 60px; /* Adjust based on your header height */
+    bottom: 0;
+    overflow-y: hidden;
+}
+
+.right-column {
+    padding: 20px;
+    margin-left: 33.33%; /* Adjust based on the left column width */
+    height: calc(100vh - 60px); /* Adjust based on your header height */
+    overflow-y: auto;
 }
 
 .name-box {
@@ -22,6 +38,26 @@ body {
     margin-bottom: 20px;
 }
 
+.profile-links {
+    margin-top: 20px;
+}
+
+.profile-link {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.profile-link:hover {
+    color: #8B0000;
+}
+
+.profile-link i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
 .info-box {
     background-color: #f9f9f9;
     padding: 15px;
@@ -33,16 +69,12 @@ body {
     margin-bottom: 10px;
 }
 
-.right-column {
-    padding: 20px;
-}
-
-.right-column h1 {
+.content-box h1 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-.right-column h2 {
+.content-box h2 {
     font-size: 1.5em;
     color: #00008B;
     border-bottom: 1px solid #00008B;
@@ -51,10 +83,20 @@ body {
     margin-bottom: 15px;
 }
 
-.welcome-text {
-    margin-bottom: 20px;
-}
-
 ul {
     padding-left: 20px;
+}
+
+@media (max-width: 767px) {
+    .left-column {
+        position: static;
+        margin-bottom: 20px;
+        overflow-y: visible;
+    }
+
+    .right-column {
+        margin-left: 0;
+        height: auto;
+        overflow-y: visible;
+    }
 }
