@@ -1,3 +1,4 @@
+// common.js
 function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
     // Add event listener after opening the sidebar
@@ -25,3 +26,28 @@ function closeSidebarOnClickOutside(event) {
 document.querySelector(".openbtn").addEventListener('click', function(event) {
     event.stopPropagation();
 });
+
+// Smooth scrolling for research page links
+$(document).ready(function() {
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 100
+            }, 1000);
+        }
+    });
+});
+
+// Highlight active section in research nav
+$(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop();
+
+    $('section').each(function(i) {
+        if ($(this).position().top <= scrollDistance + 200) {
+            $('#research-nav ul li a.active').removeClass('active');
+            $('#research-nav ul li a').eq(i).addClass('active');
+        }
+    });
+}).scroll();

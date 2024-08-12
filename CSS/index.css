@@ -1,7 +1,60 @@
-.main-content {
-    padding-top: 5rem;
+body {
+    font-family: Arial, sans-serif;
 }
+
+.left-column {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.name-box {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 .profile-img {
-    width: 200px;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.info-box h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.right-column {
+    padding: 20px;
+}
+
+.right-column h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.right-column h2 {
+    font-size: 1.5em;
+    color: #00008B;
+    border-bottom: 1px solid #00008B;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.welcome-text {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
 }
