@@ -29,10 +29,13 @@
     <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <button class="openbtn" onclick="openNav()">☰ Menu</button>
-                <a class="navbar-brand" href="#"><img src="245-2451831_iit-madras-logo.png" alt="IIT Madras Logo"></a>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
+                <button class="openbtn" onclick="openNav()">☰</button>
+                <div class="logo-text-container">
+                    <a class="navbar-brand" href="#"><img src="245-2451831_iit-madras-logo.png" alt="IIT Madras Logo"></a>
+                    <div id="text">Colloids and Surface at IITM</div>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="aboutMe.html">About me</a></li>
                         <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
@@ -48,30 +51,72 @@
     </header>
 
     <!-- Main Content -->
-    <section id="experience" class="main-content">
+    <section id="people" class="main-content">
         <div class="container">
-            <h2>Professional Experience</h2>
-            <h3>Career Timeline</h3>
-            <ul>
-                <li>Professor, IIT Madras (Since 2021)</li>
-                <li>Associate Professor, IIT Madras (2016-2021)</li>
-                <li>Assistant Professor, IIT Madras (2011-2016)</li>
-                <li>Postdoctoral Researcher, University of Delaware, USA (2008-2010)</li>
-                <li>Visiting Appointments</li>
-            </ul>
+            <div class="current-post-doc-mentorship">
+                <h3 class="section-title">Current Post-Doc Mentorship</h3>
+                <ul>
+                    <li>Dr. Soumyajyoti Chatterjee [March 2023-current] (Co-mentor: Dr. Abhijit P Deshpande, IIT Madras)</li>
+                    <li>Dr. Kaniska Murmu [March 2023-current] (Co-mentor: Dr. Manas Mukherjee, IIT Madras)</li>
+                    <li>Chirasmita Panigrahi [June 2023 - Current] (Co-mentor: Dr. Sumesh P Thampi, IIT Madras)</li>
+                </ul>
+            </div>
+    
+            <div class="current-phd-students">
+                <h3 class="section-title">Current PhD Students</h3>
+                <ul>
+                    <li>H Sankar. Thesis title “Evaporation Kinetics of Particle Laden Drops – Role of Substrate orientation” Expected to Graduate in 2025. [Co-advised with Prof. Sumesh P. Thampi, Department of Chemical Engineering, IIT Madras]</li>
+                    <li>Swaraj Deodar. Thesis title “Polymer fibres by force spinning” Expected to Graduate in 2027. [Co-advised with Prof. Ruth Cardinaels, Department of Chemical Engineering, KU Leuven, Belgium]</li>
+                    <li>Ashok Suna. Thesis title “Porous ceramic via colloidal processing” Expected to Graduate in 2028. [Co-advised with Prof. Manas Mukherjee, Metallurgical and Materials Engineering, IIT Madras]</li>
+                </ul>
+            </div>
+    
+            <div class="current-ms-students">
+                <h3 class="section-title">Current MS Students</h3>
+                <ul>
+                    <li>Kuldeep Yele, Self-propulsion of non-spherical colloids. [Co-advised with Prof. Sumesh P. Thampi, Department of Chemical Engineering, IIT Madras]</li>
+                </ul>
+            </div>
+    
+            <div class="past-post-doc-mentorship">
+                <h3 class="section-title">Past Post-Doc Mentorship</h3>
+                <ul>
+                    <li>Dr. G. Mallikarjunachari [2017-2018] (Co-mentor: Dr. Parag Ravindran, IIT Madras)</li>
+                    <li>Dr. Priyanka Biswas [2020-2021] (Co-mentor: Dr. Dillip K Satapathy, IIT Madras)</li>
+                    <li>Dr. Nitai Chandra Maji [Jan 2021-July 2022] (Co-mentor: Dr. Niket S Kaisare, IIT Madras)</li>
+                    <li>Dr. Amol Subhedar [Jan 2021-July 2022] (Co-mentor: Dr. Sumesh P Thampi, IIT Madras)</li>
+                    <li>Dr. Abinash Das [May 2021-Sep 2022] (Co-mentor: Dr. Aravind Kumar Chandiran, IIT Madras)</li>
+                    <li>Dr. Garima Mishra [May 2021-Sep 2022] (Co-mentor: Dr. Sumesh P Thampi, IIT Madras)</li>
+                    <li>Dr. Raja Rajamanickam [May 2021-current] (Co-mentor: Dr. Pijush Ghoh, IIT Madras)</li>
+                    <li>Dr. A. Mohammed Siddiq [July 2022-current] (Co-mentor: Dr. Abhijit P Deshpande, IIT Madras)</li>
+                    <li>Dr. T. G. Anjali [November 2022-current] (Co-mentor: Dr. Abhijit P Deshpande, IIT Madras)</li>
+                </ul>
+            </div>
+    
+            <div class="phd-thesis">
+                <h3 class="section-title">PhD Thesis Supervised</h3>
+                <ul>
+                    <li>C. Sreejith. Thesis title “Production of Drug-encapsulated Microparticles by Spinning Disk Atomization and Microfluidic Techniques” (2024). [Co-advised with Prof. Raghunathan Rengaswamy, Department of Chemical Engineering, IIT Madras]</li>
+                    <li>Hemant Kumar. Thesis title “Engineering the formation and destabilization of Pickering emulsions” (2024). Current Position: Post-Doc, Department of Chemical Engineering, IIT Madras</li>
+                    <li>Sanket Kumar. Thesis title “Desiccation cracks in colloidal deposits”. (2024). [Co-advised with Prof. Dillip. K. Satapathy, Department of Physics, IIT Madras] Current Position: Post-Doc, Department of Chemical Engineering, KULeuven</li>
+                    <li>Preetika Rastogi. Thesis title “Design of diesel emulsion fuels.” (2023). [Co-advised with Prof. Niket S. Kaisare, Department of Chemical Engineering, IIT Madras]</li>
+                    <!-- Additional PhD students can be added here -->
+                </ul>
+            </div>
+    
+            <div class="ms-thesis">
+                <h3 class="section-title">M.S. Thesis Supervised</h3>
+                <ul>
+                    <li>Manaswini Gowtham V. Thesis title “Understanding interactions in like charged surfactant-nanoparticle systems” (2024). [Co-advised with Prof. Sumesh P. Thampi, Department of Chemical Engineering, IIT Madras]</li>
+                    <li>Kiruthika Jayaseelan. Thesis title “Nanoparticles and fibres from polymeric waste” (2023). [Co-advised with Prof. Raghunathan Rengaswamy, Department of Chemical Engineering, IIT Madras]</li>
+                    <li>Mekala Meghana. Thesis title “Shear-thickening in dispersions of non-spherical colloids” (2023). [Co-advised with Prof. Abhijit P Deshpande, Department of Chemical Engineering, IIT Madras]</li>
+                    <!-- Additional MS students can be added here -->
+                </ul>
+            </div>
         </div>
     </section>
-    <!-- Main Content -->
-    <section id="awards" class="main-content">
-        <div class="container">
-            <h2>Awards and Honors</h2>
-            <ul>
-                <li>Institute Research and Development Award (Mid Career), IIT Madras, 2023-24</li>
-                <li>Award 2: Description</li>
-                <li>Award 3: Description</li>
-            </ul>
-        </div>
-    </section>
+    
+    
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

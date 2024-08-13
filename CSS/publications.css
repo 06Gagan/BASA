@@ -69,10 +69,4 @@
     }
 }
 
-/* Specific navigation style changes for publications section */
-.main-content nav ul li::before {
-    content: none;
-    margin-right: 0; /* Adjust margin if necessary */
-}
-
 
