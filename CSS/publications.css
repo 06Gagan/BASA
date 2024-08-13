@@ -1,3 +1,78 @@
 .main-content {
     padding: 20px;
 }
+
+.main-content h2 {
+    color: #0066cc;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.main-content h3 {
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.main-content ol {
+    padding-left: 20px;
+    counter-reset: publication-counter;
+}
+
+.main-content li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+    counter-increment: publication-counter;
+}
+
+.main-content li::before {
+    content: counter(publication-counter) ". ";
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Alternating background colors for list items */
+.main-content ol li:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.main-content ol li:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Publication highlight on hover */
+.main-content li:hover {
+    background-color: #e6f3ff;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 10px;
+    }
+
+    .main-content h2 {
+        font-size: 1.8em;
+    }
+
+    .main-content h3 {
+        font-size: 1.3em;
+    }
+
+    .main-content li {
+        font-size: 0.9em;
+    }
+}
+
+/* Specific navigation style changes for publications section */
+.main-content nav ul li::before {
+    content: none;
+    margin-right: 0; /* Adjust margin if necessary */
+}
+
+
