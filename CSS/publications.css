@@ -1,72 +1,55 @@
 .main-content {
     padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
 }
 
-.main-content h2 {
-    color: #0066cc;
-    border-bottom: 2px solid #0066cc;
-    padding-bottom: 10px;
+h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
+    color: #8B0000; /* Dark red color */
+    border-bottom: 2px solid #8B0000; /* Dark red underline */
+    padding-bottom: 10px;
 }
 
-.main-content h3 {
-    color: #333;
-    margin-top: 30px;
+.project-category h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #8B0000; /* Dark red color */
+    border-bottom: 2px solid #8B0000; /* Dark red underline */
+    padding-bottom: 10px;
+}
+
+.sub-category h4 {
+    font-size: 1.8em;
     margin-bottom: 15px;
-    font-size: 1.5em;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-}
-
-.main-content ol {
-    padding-left: 20px;
-    counter-reset: publication-counter;
-}
-
-.main-content li {
-    margin-bottom: 10px;
-    line-height: 1.4;
-    counter-increment: publication-counter;
-}
-
-.main-content li::before {
-    content: counter(publication-counter) ". ";
+    color: #333;
     font-weight: bold;
-    margin-right: 5px;
+    padding-bottom: 8px;
 }
 
-/* Alternating background colors for list items */
-.main-content ol li:nth-child(odd) {
-    background-color: #f9f9f9;
+.project-item {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #8B0000; /* Red left border */
+    margin-left: 20px;
 }
 
-.main-content ol li:nth-child(even) {
-    background-color: #ffffff;
+.project-item h5 {
+    font-size: 1.5em;
+    color: #444;
+    margin-bottom: 5px;
 }
 
-/* Publication highlight on hover */
-.main-content li:hover {
-    background-color: #e6f3ff;
-    transition: background-color 0.3s ease;
+.project-item p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .main-content {
-        padding: 10px;
-    }
-
-    .main-content h2 {
-        font-size: 1.8em;
-    }
-
-    .main-content h3 {
-        font-size: 1.3em;
-    }
-
-    .main-content li {
-        font-size: 0.9em;
-    }
+.project-item p em {
+    font-style: italic;
+    color: #888;
 }
+
 
 
