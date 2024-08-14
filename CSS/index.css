@@ -1,7 +1,9 @@
+/* General Styles */
 body, html {
     height: 100%;
     margin: 0;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container-fluid.main-content {
@@ -17,13 +19,13 @@ body, html {
 
 .left-column {
     width: 33.33%;
-    padding: 25px;
+    padding: 30px 20px;
     background-color: #f0f0f0;
-    overflow-y: auto;
     position: fixed;
     top: 60px; /* Adjust based on your header height */
     bottom: 0;
     left: 0;
+    overflow: hidden; /* Ensure no scroll on larger screens */
 }
 
 .right-column {
@@ -58,9 +60,12 @@ body, html {
     border: 1px solid #ddd;
     font-size: 1.1em;
     line-height: 1.2;
+    margin-bottom: 15px;
+    padding-left:5px;
 }
 
 .info-box h2 {
+    font-family: 'Merriweather', serif;
     font-size: 1.05em;
     margin-bottom: 5px;
 }
@@ -76,12 +81,59 @@ body, html {
 .profile-link {
     display: block;
     margin-bottom: 5px;
-    color: #0066cc;
+    color: #8B0000;
     text-decoration: none;
 }
 
 .profile-link:hover {
     text-decoration: underline;
+    color: #555;
+}
+
+/* Content Box */
+.content-box {
+    padding: 20px;
+}
+
+.content-box h1 {
+    font-family: 'Merriweather', serif;
+    color: #8B0000;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content-box h2 {
+    font-family: 'Merriweather', serif;
+    color: #8B0000;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-left: 4px solid #8B0000;
+    margin-bottom: 15px;
+}
+
+.content-box p, .content-box ul {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.content-box ul {
+    padding-left: 20px;
+}
+
+.content-box a {
+    color: #8B0000;
+}
+
+.content-box a:hover {
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) { /* Threshold for large screens */
+    .left-column {
+        overflow-y: auto; /* Scrollable on smaller screens */
+    }
 }
 
 @media (max-width: 768px) {
@@ -106,4 +158,28 @@ body, html {
     .name-box {
         margin-top: 15px; /* Ensure margin-top is consistent on mobile */
     }
+
+    .content-box h1 {
+        font-size: 1.8em;
+    }
+
+    .content-box h2 {
+        font-size: 1.4em;
+    }
+
+    .profile-links a {
+        font-size: 1em;
+    }
+
+    .profile-img {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }
+
+/* Additional Interactive Elements */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchored links */
+}
+
+
