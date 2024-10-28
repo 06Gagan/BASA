@@ -28,17 +28,17 @@ document.querySelector(".openbtn").addEventListener('click', function(event) {
 });
 
 // Smooth scrolling for research page links
-$(document).ready(function() {
-    $('a[href^="#"]').on('click', function(event) {
-        var target = $(this.getAttribute('href'));
-        if( target.length ) {
-            event.preventDefault();
-            $('html, body').stop().animate({
-                scrollTop: target.offset().top - 100
-            }, 1000);
-        }
-    });
-});
+// $(document).ready(function() {
+//     $('a[href^="#"]').on('click', function(event) {
+//         var target = $(this.getAttribute('href'));
+//         if( target.length ) {
+//             event.preventDefault();
+//             $('html, body').stop().animate({
+//                 scrollTop: target.offset().top - 100
+//             }, 1000);
+//         }
+//     });
+// });
 
 // Highlight active section in research nav
 $(window).scroll(function() {
