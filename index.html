@@ -14,10 +14,20 @@
 
     <!-- Sidebar -->
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button class="closebtn" onclick="closeNav()">&times;</button>
         <a href="index.html">Home</a>
-        <a href="aboutMe.html">About me</a>
-        <a href="research.html">Research</a>
+        <a href="aboutMe.html">About Me</a>
+        <a href="javascript:void(0)" onclick="toggleResearchDropdown()">Research</a>
+        <div id="researchDropdown" class="dropdown-content">
+            <a href="Research/Investigation of particle shape effects in colloidal systems.html">Investigation of particle shape effects in colloidal systems</a>
+            <a href="Research/Structure and rheology of colloids.html">Structure and rheology of colloids</a>
+            <a href="Research/Desiccation cracks and external fields.html">Desiccation cracks and external fields</a>
+            <a href="Research/Hetero-aggregation in colloidal systems.html">Hetero-aggregation in colloidal systems</a>
+            <a href="Research/New materials and particles.html">New materials and particles</a>
+            <a href="Research/Biological and Environmental Interfaces.html">Biological and Environmental Interfaces</a>
+            <a href="Research/Image processing and analysis.html">Image processing and analysis</a>
+            <a href="Research/Emulsion fuels.html">Emulsion fuels</a>
+        </div>
         <a href="publications.html">Publications</a>
         <a href="projects.html">Projects</a>
         <a href="teaching.html">Teaching</a>
@@ -29,7 +39,7 @@
     <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <button class="openbtn" onclick="openNav()">☰</button>
+                <button type="button" class="openbtn" onclick="openNav()">☰</button>
                 <div class="logo-text-container">
                     <a class="navbar-brand" href="#"><img src="245-2451831_iit-madras-logo.png" alt="IIT Madras Logo"></a>
                     <div id="text">Colloids and Surface at IITM</div>
@@ -37,8 +47,20 @@
                 <div class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutMe.html">About me</a></li>
-                        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutMe.html">About Me</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="javascript:void(0)">Research</a>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="Research/Investigation of particle shape effects in colloidal systems.html">Investigation of particle shape effects in colloidal systems</a>
+                                <a class="dropdown-item" href="Research/Structure and rheology of colloids.html">Structure and rheology of colloids</a>
+                                <a class="dropdown-item" href="Research/Desiccation cracks and external fields.html">Desiccation cracks and external fields</a>
+                                <a class="dropdown-item" href="Research/Hetero-aggregation in colloidal systems.html">Hetero-aggregation in colloidal systems</a>
+                                <a class="dropdown-item" href="Research/New materials and particles.html">New materials and particles</a>
+                                <a class="dropdown-item" href="Research/Biological and Environmental Interfaces.html">Biological and Environmental Interfaces</a>
+                                <a class="dropdown-item" href="Research/Image processing and analysis.html">Image processing and analysis</a>
+                                <a class="dropdown-item" href="Research/Emulsion fuels.html">Emulsion fuels</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
@@ -64,30 +86,29 @@
                     <p>HSB151, 044-22574164</p>
                     <p>basa@iitm.ac.in</p>
                     <div class="profile-links">
-                        <a href="https://scholar.google.com/citations?hl=en&user=iJI-8rkAAAAJ" target="_blank" class="profile-link">Google Scholar</a>
-                        <a href="https://www.researchgate.net/profile/Basavaraja-Madivala-Gurappa" target="_blank" class="profile-link">ResearchGate</a>
-                        <a href="https://iitm.irins.org/profile/61912" target="_blank" class="profile-link">IIT IRINS Profile</a>
-                        <a href="https://che.iitm.ac.in/basa/" target="_blank" class="profile-link">IITM Homepage</a>
+                        <a href="https://scholar.google.com/citations?hl=en&user=iJI-8rkAAAAJ" target="_blank" class="profile-link" rel="noopener">Google Scholar</a>
+                        <a href="https://www.researchgate.net/profile/Basavaraja-Madivala-Gurappa" target="_blank" class="profile-link" rel="noopener">ResearchGate</a>
+                        <a href="https://iitm.irins.org/profile/61912" target="_blank" class="profile-link" rel="noopener">IIT IRINS Profile</a>
+                        <a href="https://che.iitm.ac.in/basa/" target="_blank" class="profile-link" rel="noopener">IITM Homepage</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-8 right-column">
                 <div class="content-box">
                     <h1>Welcome to Dr. Madivala G. Basavaraj's Page</h1>
-                    
                     <h2>Biography</h2>
                     <p>Madivala G. Basavaraj is a professor in the <a href="https://che.iitm.ac.in/" target="_blank">Department of Chemical Engineering</a> at the <a href="https://www.iitm.ac.in/" target="_blank">Indian Institute of Technology Madras</a>. He obtained his Ph.D. from <a href="https://www.kuleuven.be/english/kuleuven" target="_blank">KU Leuven, Belgium</a> and carried out postdoctoral research at the <a href="https://www.udel.edu/" target="_blank">University of Delaware, USA</a>. His research interests include particles at interfaces, colloid self-assembly, desiccation cracks, colloidal gels, emulsion fuels, Pickering emulsions, and cellulose–ionic liquid solutions.</p>
                     
                     <h2>Research Interests</h2>
                     <ul>
-                        <li><a href="Reasearch/Investigation of particle shape effects in colloidal systems.html">Investigation of particle shape effects in colloidal systems</a></li>
-                        <li><a href="Reasearch/Structure and rheology of colloids.html">Structure and rheology of colloids</a></li>
-                        <li><a href="Reasearch/Desiccation cracks and external fields.html">Desiccation cracks and external fields</a></li>
-                        <li><a href="Reasearch/Hetero-aggregation in colloidal systems.html">Hetero-aggregation in colloidal systems</a></li>
-                        <li><a href="Reasearch/New materials and particles.html">New materials and particles</a></li>
-                        <li><a href="Reasearch/Biological and Environmental Interfaces.html">Biological and Environmental Interfaces</a></li>
-                        <li><a href="Reasearch/Image processing and analysis.html">Image processing and analysis</a></li>
-                        <li><a href="Reasearch/Emulsion fuels.html">Emulsion fuels</a></li>
+                        <li><a href="Research/Investigation of particle shape effects in colloidal systems.html">Investigation of particle shape effects in colloidal systems</a></li>
+                        <li><a href="Research/Structure and rheology of colloids.html">Structure and rheology of colloids</a></li>
+                        <li><a href="Research/Desiccation cracks and external fields.html">Desiccation cracks and external fields</a></li>
+                        <li><a href="Research/Hetero-aggregation in colloidal systems.html">Hetero-aggregation in colloidal systems</a></li>
+                        <li><a href="Research/New materials and particles.html">New materials and particles</a></li>
+                        <li><a href="Research/Biological and Environmental Interfaces.html">Biological and Environmental Interfaces</a></li>
+                        <li><a href="Research/Image processing and analysis.html">Image processing and analysis</a></li>
+                        <li><a href="Research/Emulsion fuels.html">Emulsion fuels</a></li>
                     </ul>
                     
                     <h2>Approach</h2>
@@ -100,7 +121,7 @@
         </div>
     </div>
     
-    
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

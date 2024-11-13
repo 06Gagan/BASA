@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Basavaraj M. Gurappa - Contact</title>
+    <title>Dr. Basavaraj M. Gurappa - Home</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/Common.css">
-    <link rel="stylesheet" href="CSS/news.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 
 <body>
@@ -16,8 +16,19 @@
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.html">Home</a>
-        <a href="aboutMe.html">About me</a>
-        <a href="research.html">Research</a>
+        <a href="aboutMe.html">About Me</a>
+        <!-- Research section with Dropdown in Sidebar (for Mobile and Sidebar views) -->
+        <a href="javascript:void(0)" onclick="toggleResearchDropdown()">Research</a>
+        <div id="researchDropdown" class="dropdown-content">
+            <a href="Research/Investigation of particle shape effects in colloidal systems.html">Investigation of particle shape effects in colloidal systems</a>
+            <a href="Research/Structure and rheology of colloids.html">Structure and rheology of colloids</a>
+            <a href="Research/Desiccation cracks and external fields.html">Desiccation cracks and external fields</a>
+            <a href="Research/Hetero-aggregation in colloidal systems.html">Hetero-aggregation in colloidal systems</a>
+            <a href="Research/New materials and particles.html">New materials and particles</a>
+            <a href="Research/Biological and Environmental Interfaces.html">Biological and Environmental Interfaces</a>
+            <a href="Research/Image processing and analysis.html">Image processing and analysis</a>
+            <a href="Research/Emulsion fuels.html">Emulsion fuels</a>
+        </div>
         <a href="publications.html">Publications</a>
         <a href="projects.html">Projects</a>
         <a href="teaching.html">Teaching</a>
@@ -29,7 +40,7 @@
     <header class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <button class="openbtn" onclick="openNav()">☰</button>
+                <button type="button" class="openbtn" onclick="openNav()">☰</button>
                 <div class="logo-text-container">
                     <a class="navbar-brand" href="#"><img src="245-2451831_iit-madras-logo.png" alt="IIT Madras Logo"></a>
                     <div id="text">Colloids and Surface at IITM</div>
@@ -37,8 +48,20 @@
                 <div class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutMe.html">About me</a></li>
-                        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutMe.html">About Me</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="javascript:void(0)">Research</a>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="Research/Investigation of particle shape effects in colloidal systems.html">Investigation of particle shape effects in colloidal systems</a>
+                                <a class="dropdown-item" href="Research/Structure and rheology of colloids.html">Structure and rheology of colloids</a>
+                                <a class="dropdown-item" href="Research/Desiccation cracks and external fields.html">Desiccation cracks and external fields</a>
+                                <a class="dropdown-item" href="Research/Hetero-aggregation in colloidal systems.html">Hetero-aggregation in colloidal systems</a>
+                                <a class="dropdown-item" href="Research/New materials and particles.html">New materials and particles</a>
+                                <a class="dropdown-item" href="Research/Biological and Environmental Interfaces.html">Biological and Environmental Interfaces</a>
+                                <a class="dropdown-item" href="Research/Image processing and analysis.html">Image processing and analysis</a>
+                                <a class="dropdown-item" href="Research/Emulsion fuels.html">Emulsion fuels</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
                         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
@@ -50,15 +73,50 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <section id="contact" class="main-content">
-        <div class="container">
-            <h2>Contact</h2>
-            <p><strong>Email:</strong> basa@iitm.ac.in | <strong>Phone:</strong> +91 44 22574164 |
-                <strong>Office:</strong> IIT Madras, Chennai, India</p>
-        </div>
-    </section>
+    <!-- Main Content for News Section -->
+    <div class="container-fluid main-content">
+        <div class="news-container">
+            <h1 class="news-title">Latest News & Updates</h1>
 
+            <!-- Scrollable News Section -->
+            <div class="news-scrollable">
+                <!-- Recent Publications Section -->
+                <div class="recent-publications">
+                    <h2>Recent Publications</h2>
+                    <div class="news-card">
+                        <span class="badge publication-badge">Publication</span>
+                        <img src="publication-image1.jpg" alt="Publication Image" class="news-image">
+                        <div class="news-content">
+                            <h3 class="news-heading">Innovative Approach in Colloidal Science</h3>
+                            <p class="news-date">Published: October 20, 2023</p>
+                            <p class="news-summary">A new publication on colloidal science by Dr. Basavaraj explores unique applications in industry.</p>
+                            <a href="publication-details.html" class="read-more">Read Publication</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Grid Section -->
+                <div class="news-grid">
+                    <!-- Example News Card -->
+                    <div class="news-card">
+                        <span class="badge news-badge">News</span>
+                        <img src="news-image1.jpg" alt="News Image" class="news-image">
+                        <div class="news-content">
+                            <h3 class="news-heading">Research Breakthrough in Colloidal Systems</h3>
+                            <p class="news-date">October 15, 2023</p>
+                            <p class="news-summary">Dr. Basavaraj and team make a breakthrough in colloidal system research. This discovery has the potential to impact industrial processes worldwide.</p>
+                            <a href="news-details.html" class="read-more">Read More</a>
+                        </div>
+                    </div>
+
+                    <!-- Additional News and Publication Cards -->
+                    <!-- More news cards can be added here with the same structure -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,53 +1,48 @@
-// common.js
+// Function to open the sidebar
 function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-    // Add event listener after opening the sidebar
-    setTimeout(() => {
-        document.addEventListener('click', closeSidebarOnClickOutside);
-    }, 0);
+  const sidebar = document.getElementById("mySidebar");
+  sidebar.style.width = "250px";
+
+  // Add a click-outside listener only once the sidebar is open
+  setTimeout(
+    () => document.addEventListener("click", closeSidebarOnClickOutside),
+    0
+  );
 }
 
+// Function to close the sidebar
 function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    // Remove event listener after closing the sidebar
-    document.removeEventListener('click', closeSidebarOnClickOutside);
+  const sidebar = document.getElementById("mySidebar");
+  sidebar.style.width = "0";
+
+  // Remove the click-outside listener when the sidebar is closed
+  document.removeEventListener("click", closeSidebarOnClickOutside);
 }
 
+// Function to close the sidebar if clicking outside of it
 function closeSidebarOnClickOutside(event) {
-    var sidebar = document.getElementById("mySidebar");
-    var openBtn = document.querySelector(".openbtn");
-    
-    if (!sidebar.contains(event.target) && event.target !== openBtn) {
-        closeNav();
-    }
+  const sidebar = document.getElementById("mySidebar");
+  const openBtn = document.querySelector(".openbtn");
+
+  // Close sidebar only if the click is outside the sidebar and not on the open button
+  if (!sidebar.contains(event.target) && event.target !== openBtn) {
+    closeNav();
+  }
 }
 
-// Add this event listener to prevent immediate closure when clicking the open button
-document.querySelector(".openbtn").addEventListener('click', function(event) {
-    event.stopPropagation();
+// Prevent immediate closure when clicking the open button to open the sidebar
+document.querySelector(".openbtn").addEventListener("click", function (event) {
+  event.stopPropagation();
 });
 
-// Smooth scrolling for research page links
-// $(document).ready(function() {
-//     $('a[href^="#"]').on('click', function(event) {
-//         var target = $(this.getAttribute('href'));
-//         if( target.length ) {
-//             event.preventDefault();
-//             $('html, body').stop().animate({
-//                 scrollTop: target.offset().top - 100
-//             }, 1000);
-//         }
-//     });
-// });
+// Function to toggle the research dropdown visibility within the sidebar
+function toggleResearchDropdown() {
+  const dropdown = document.getElementById("researchDropdown");
 
-// Highlight active section in research nav
-$(window).scroll(function() {
-    var scrollDistance = $(window).scrollTop();
-
-    $('section').each(function(i) {
-        if ($(this).position().top <= scrollDistance + 200) {
-            $('#research-nav ul li a.active').removeClass('active');
-            $('#research-nav ul li a').eq(i).addClass('active');
-        }
-    });
-}).scroll();
+  // Toggle between showing and hiding the dropdown content
+  if (dropdown.style.display === "block") {
+    dropdown.style.display = "none";
+  } else {
+    dropdown.style.display = "block";
+  }
+}
