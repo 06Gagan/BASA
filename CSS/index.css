@@ -16,7 +16,11 @@ body, html {
     padding: 20px;
     background-color: #f0f0f0;
     box-sizing: border-box;
-    overflow: hidden; /* Prevents scrolling in the left column */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spreads out content to avoid empty space */
+    height: 100%; /* Ensures left column takes full height */
+    overflow: hidden; /* Prevents scrolling */
 }
 
 .right-column {
@@ -24,7 +28,7 @@ body, html {
     padding: 20px;
     overflow-y: auto; /* Only right column scrolls if content overflows */
     box-sizing: border-box;
-    height: 100%; /* Ensures right column fills full height */
+    height: 100%;
 }
 
 /* Styling for the compact info-box */
@@ -35,6 +39,7 @@ body, html {
     font-size: 1em; /* Adjusted font size */
     line-height: 1.2; /* Reduced line height for compact spacing */
     margin-bottom: 15px;
+    flex-grow: 1; /* Ensures the info box can expand as needed */
 }
 
 .info-box h2 {
