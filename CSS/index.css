@@ -2,87 +2,56 @@
 body, html {
     height: 100%;
     margin: 0;
-    overflow: hidden;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden; /* Prevents entire page from scrolling */
 }
 
 .container-fluid.main-content {
-    height: calc(100vh - 60px); /* Adjust based on your header height */
-    overflow: hidden;
-}
-
-.row {
-    display: flex;
-    height: 100%;
-    flex-wrap: nowrap; /* Prevent wrapping on large screens */
+    display: flex; /* Flex layout to control column widths */
+    height: 100vh; /* Full viewport height */
 }
 
 .left-column {
-    width: 33.33%;
-    padding: 30px 20px;
+    width: 350px; /* Fixed width for the left section */
+    padding: 20px;
     background-color: #f0f0f0;
-    position: fixed;
-    top: 60px; /* Adjust based on your header height */
-    bottom: 0;
-    left: 0;
-    overflow: hidden; /* Ensure no scroll on larger screens */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevents scrolling in the left column */
 }
 
 .right-column {
-    width: 66.67%;
-    margin-left: 33.33%;
+    flex-grow: 1; /* Allows right column to fill remaining space */
     padding: 20px;
-    overflow-y: auto;
-    height: 100%;
+    overflow-y: auto; /* Only right column scrolls if content overflows */
+    box-sizing: border-box;
+    height: 100%; /* Ensures right column fills full height */
 }
 
-.name-box {
-    background-color: #8B0000;
-    color: white;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 0; /* Maintain consistent margin-top */
-}
-
-.profile-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    padding-left: 25%;
-    padding-right: 25%;
-}
-
+/* Styling for the compact info-box */
 .info-box {
     background-color: #f9f9f9;
-    padding: 10px;
+    padding: 8px; /* Reduced padding for compactness */
     border: 1px solid #ddd;
-    font-size: 1.1em;
-    line-height: 1.2;
+    font-size: 1em; /* Adjusted font size */
+    line-height: 1.2; /* Reduced line height for compact spacing */
     margin-bottom: 15px;
-    padding-left:5px;
 }
 
 .info-box h2 {
-    font-family: 'Merriweather', serif;
-    font-size: 1.05em;
-    margin-bottom: 5px;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
 .info-box p {
-    margin-bottom: 3px;
-}
-
-.profile-links {
-    margin-top: 10px;
+    margin: 4px 0; /* Reduced margin for compact spacing */
 }
 
 .profile-link {
-    display: block;
-    margin-bottom: 5px;
+    display: block; /* Each link on a new line */
     color: #8B0000;
     text-decoration: none;
+    margin: 3px 0; /* Small vertical margin between links */
 }
 
 .profile-link:hover {
@@ -90,21 +59,42 @@ body, html {
     color: #555;
 }
 
-/* Content Box */
+/* Additional styles for elements inside left column */
+.name-box {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.profile-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding-left: 10%; /* Centered padding */
+    padding-right: 10%;
+}
+
+/* Content Box Styling */
 .content-box {
     padding: 20px;
 }
 
-.content-box h1 {
-    font-family: 'Merriweather', serif;
+.content-box h1, .content-box h2 {
     color: #8B0000;
+    font-family: 'Merriweather', serif;
+}
+
+.content-box h1 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
 .content-box h2 {
-    font-family: 'Merriweather', serif;
-    color: #8B0000;
+    font-size: 1.6em;
     background-color: #f9f9f9;
     padding: 10px;
     border-left: 4px solid #8B0000;
@@ -130,56 +120,13 @@ body, html {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 1024px) { /* Threshold for large screens */
-    .left-column {
-        overflow-y: auto; /* Scrollable on smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    body, html {
-        overflow: auto; /* Allow full-page scrolling on mobile */
-    }
+@media (max-width: 1024px) { 
     .container-fluid.main-content {
-        height: auto;
-        overflow: visible;
-    }
-    .row {
-        flex-direction: column;
-        flex-wrap: wrap; /* Allow wrapping on small screens */
+        flex-direction: column; /* Stack columns on smaller screens */
     }
     .left-column, .right-column {
-        width: 100%;
-        position: static;
-        margin-left: 0;
-        overflow-y: visible;
-        padding: 10px; /* Ensure consistent padding on smaller screens */
-    }
-    .name-box {
-        margin-top: 15px; /* Ensure margin-top is consistent on mobile */
-    }
-
-    .content-box h1 {
-        font-size: 1.8em;
-    }
-
-    .content-box h2 {
-        font-size: 1.4em;
-    }
-
-    .profile-links a {
-        font-size: 1em;
-    }
-
-    .profile-img {
-        padding-left: 10%;
-        padding-right: 10%;
+        width: 100%; /* Full width for both columns on smaller screens */
+        height: auto;
+        overflow-y: auto; /* Allow scrolling on smaller screens */
     }
 }
-
-/* Additional Interactive Elements */
-html {
-    scroll-behavior: smooth; /* Smooth scrolling for anchored links */
-}
-
-
