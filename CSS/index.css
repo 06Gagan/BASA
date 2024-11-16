@@ -3,43 +3,46 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden; /* Prevents entire page from scrolling */
+    overflow: hidden;
 }
 
 .container-fluid.main-content {
-    display: flex; /* Flex layout to control column widths */
-    height: 100vh; /* Full viewport height */
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .left-column {
-    width: 350px; /* Fixed width for the left section */
+    width: 350px;
     padding: 20px;
     background-color: #f0f0f0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Spreads out content to avoid empty space */
-    height: 100%; /* Ensures left column takes full height */
-    overflow: hidden; /* Prevents scrolling */
+    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .right-column {
-    flex-grow: 1; /* Allows right column to fill remaining space */
+    flex-grow: 1;
     padding: 20px;
-    overflow-y: auto; /* Only right column scrolls if content overflows */
+    overflow-y: auto;
     box-sizing: border-box;
     height: 100%;
+    padding-top: 2px;
+    padding-bottom: 40px;
 }
 
 /* Styling for the compact info-box */
 .info-box {
     background-color: #f9f9f9;
-    padding: 8px; /* Reduced padding for compactness */
+    padding: 8px;
     border: 1px solid #ddd;
-    font-size: 1em; /* Adjusted font size */
-    line-height: 1.2; /* Reduced line height for compact spacing */
+    font-size: 1em;
+    line-height: 1.2;
     margin-bottom: 15px;
-    flex-grow: 1; /* Ensures the info box can expand as needed */
+    flex-grow: 1;
 }
 
 .info-box h2 {
@@ -49,14 +52,14 @@ body, html {
 }
 
 .info-box p {
-    margin: 4px 0; /* Reduced margin for compact spacing */
+    margin: 4px 0;
 }
 
 .profile-link {
-    display: block; /* Each link on a new line */
+    display: block;
     color: #8B0000;
     text-decoration: none;
-    margin: 3px 0; /* Small vertical margin between links */
+    margin: 3px 0;
 }
 
 .profile-link:hover {
@@ -79,7 +82,7 @@ body, html {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    padding-left: 10%; /* Centered padding */
+    padding-left: 10%;
     padding-right: 10%;
 }
 
@@ -124,14 +127,33 @@ body, html {
     color: #555;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) { 
-    .container-fluid.main-content {
-        flex-direction: column; /* Stack columns on smaller screens */
-    }
-    .left-column, .right-column {
-        width: 100%; /* Full width for both columns on smaller screens */
+/* Only addition: Mobile Responsive Design */
+@media (max-width: 1024px) {
+    body, html {
+        overflow-y: auto;
         height: auto;
-        overflow-y: auto; /* Allow scrolling on smaller screens */
+    }
+
+    .container-fluid.main-content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-column {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-column {
+        width: 100%;
+        height: auto;
+    }
+    
+    .header {
+        margin-top: 0;
+    }
+    
+    .container {
+        margin-top: 0;
     }
 }
